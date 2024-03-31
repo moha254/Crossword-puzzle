@@ -1,0 +1,462 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5, CSS3 and JavaScript 6th Edition
+   Tutorial 11
+   Case Problem 3
+   
+   Crossword Puzzle Style Sheet
+   
+   Filename: pc_cword.css
+
+*/
+
+
+table#crossword {
+   font-size: 1.4em;
+   border: 1px solid rgb(101, 101, 101);
+   box-shadow: rgb(51, 51, 51) 5px 5px 15px, rgb(51, 51, 51) -5px -5px 15px;
+   border-collapse: collapse;
+   color: rgb(101, 101, 101);
+   margin: 20px;
+}
+
+table#crossword caption {
+   font-size: 1.9em;
+   font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+   caption-side: top;
+   text-align: center;
+   margin: 2rem;
+}
+table {
+   border-collapse: collapse;
+}
+td {
+   border: 1px solid black;
+   width: 30px;
+   height: 30px;
+   text-align: center;
+}
+input {
+   border: none;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+}
+table#crossword td {
+   position: relative;
+   text-align: center;
+   font-size: 1.3em;
+   vertical-align: middle;
+   text-transform: uppercase;
+   width: 40px;
+   height: 40px;
+}
+
+table#crossword td input {
+   display: block; 
+   line-height: 40px;
+   width: 40px;
+   height: 40px;
+}
+
+table#crossword td sup {
+   font-size: 0.4em;
+   position: relative;
+   left: 2px;
+}
+
+table#crossword td.blank {
+   background-color: rgb(151, 151, 151);
+   border: 1px solid rgb(101, 101, 101);
+}
+
+#checkScoreBtn {
+ 
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.error {
+   background-color: #FFC0CB; /* Light pink */
+}
+#showErrorsBtn{
+ 
+   background-color: orange;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+/* CSS for Pagination */
+.pagination {
+   text-align: center;
+   margin-top: 20px;
+}
+.crossword-grid {
+   margin: 9rem; /* This will center the crossword grid horizontally */
+  
+}
+
+
+.btn {
+   display: inline-block;
+   padding: 8px 16px;
+   margin: 0 5px;
+   text-decoration: none;
+   color: #fff;
+   background-color: #007bff;
+   border: 1px solid #007bff;
+   border-radius: 4px;
+   transition: background-color 0.3s;
+}
+
+.btn:hover {
+   background-color: #0056b3;
+}
+
+.current-page {
+   display: inline-block;
+   padding: 8px 16px;
+   margin: 0 5px;
+   color: #333;
+   background-color: #eee;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+}
+
+#resetButton {
+ 
+   background-color: #f44336; /* Red */
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.cell {
+   width: 30px;
+   height: 30px;
+   text-align: center;
+   border: 1px solid black;
+   display: inline-block;
+}
+.yellow {
+   background-color: yellow;
+}
+.green {
+   background-color: lightgreen;
+}
+.red {
+   background-color: lightcoral;
+}
+form {
+   width: 500px;
+   margin-top: 7rem;
+}
+
+label {
+   display: block;
+   margin-bottom: 5px;
+}
+
+input[type='number'] {
+   width: 100px;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+
+input[type='submit'] {
+   width: 100px;
+   padding: 8px;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+input[type='submit']:hover {
+   background-color: #45a049;
+}
+
+
+/* Clues */
+
+
+
+aside div {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap; 
+   width: 100%;
+   margin-top:5rem
+}
+
+aside div section {
+   -webkit-flex: 1 1 200px;
+   flex: 1 1 200px;
+}
+
+ol#across, ol#down {
+   list-style-type: decimal;
+   margin-left: 40px;
+   line-height: 1.5em;
+   font-size: 1em;
+   margin-bottom: 30px;
+}
+
+/* Buttons and Images */
+
+div#crossButtons {
+   width: 100%;
+   text-align: center;
+   margin-bottom: 20px;
+   line-height: 42px;
+}
+
+div#crossButtons img#directionImg {
+   width: 42px;
+   height: 42px;
+   display: inline-block;
+   margin: 0px 10px;
+}
+
+div#crossButtons input {
+   display: inline-block;
+   width: 120px;
+   height: 42px;
+   margin: 0px 10px;
+   font-size: 1.2em;
+   border: 5px double rgb(111, 111, 255);
+   border-radius: 25px;
+   box-shadow: 0px 0px 10px rgb(51, 51, 51);
+}
+
+div#crossButtons input:hover {
+   color: rgb(255, 255, 211);
+   background-color: rgb(181, 181, 255);
+}  
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+
+ul, ol {
+   list-style: none;
+   padding:1.5rem;
+   gap:2rem;
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+html {
+   background: rgb(191, 191, 191);
+   font-family: Verdana, Geneva, sans-serif;
+ 
+}
+
+body {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;   
+   background: white;
+   max-width: 1300px;
+   min-width: 420px;
+   margin: 0px auto;
+   box-shadow: rgb(51, 51, 51) 10px 10px 25px,  rgb(51, 51, 51) -10px 10px 25px;
+}
+
+p {
+   font-size: 1.2em;
+   line-height: 1.4em;
+   margin: 15px;
+}
+
+
+/* Header Styles */
+
+body > header {
+   background: url(pc_logo.png) center/cover no-repeat;
+   width: 100%;
+}
+
+body > header > h1 {
+
+  /* text-align: right;*/
+   padding: 100px 20px 0px 0px;
+   font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+   font-size: 3.5em;
+   font-weight: bold;
+   color: rgb(71, 71, 191);
+   text-shadow: rgb(237, 237, 134) 0px 0px 1px,
+                rgb(237, 237, 134) 0px 0px 2px,
+                rgb(237, 237, 134) 0px 0px 5px,
+                rgb(237, 237, 134) 0px 0px 8px,                 
+                rgb(237, 237, 134) 0px 0px 10px,
+                rgb(237, 237, 134) 0px 0px 15px,
+                rgb(237, 237, 134) 0px 0px 20px,
+                rgb(237, 237, 134) 0px 0px 30px;                
+}
+
+
+/* Top Navigation Styles */
+
+nav#top ul {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   background-color: rgb(71, 71, 191);
+   height: 50px;
+}
+   
+nav#top ul li {
+   -webkit-flex: 0 1 80px;
+   flex: 0 1 80px;   
+   margin: 10px;
+}
+
+nav#top ul li a {
+   color: white;
+   display: block;
+   font-size: 1.2em;
+   text-align: center;
+   padding: 50% 0%;
+   font-variant: small-caps;
+}
+
+nav#top ul li a:hover, nav#top ul li a:active {
+   text-shadow: 0px 0px 5px black;
+   color: rgb(255, 255, 211);
+}
+
+
+
+/* Article Styles */
+
+article {
+   -webkit-flex: 1 1 300px;
+   flex: 1 1 300px;
+}
+
+article > table#crossword {
+   margin: 30px auto;
+}
+   
+/* Aside  Styles */
+
+aside {
+   background-color: rgb(255, 255, 181);
+   color: rgb(96, 96, 28);   
+   -webkit-flex: 1 1 300px;
+   flex: 1 1 300px; 
+   padding: 0px 30px 0px 0px; 
+   position:relative;
+   left:3rem;
+   margin:4rem;
+}
+
+aside h1 {
+   font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;   
+   font-size: 2.6em;
+   font-weight: bold;
+   letter-spacing: 0.1em;
+   text-align: center;
+   margin: 20px 0px 25px;
+   width: 100%;
+}
+
+aside h2 {
+   text-align: center;
+   font-size: 1.2em;
+   margin-bottom: 15px;
+   width: 100%;
+}
+
+/* Footer Styles */
+
+footer {
+   width: 100%;
+}
+
+footer p {
+   color: rgb(211, 211, 211);
+   font-size: 0.9em;
+   text-align: center;
+   background-color: rgb(11, 11, 71);
+   margin: 0px;
+   padding: 10px 0px;
+}
+
+
+/* Bottom Navigation List Styles */
+
+nav#bottom {
+   background-color: rgb(71, 71, 191);
+   color: rgb(211, 211, 211);
+   padding: 15px;
+}
+
+nav#bottom ul li {
+   font-size: 1em;
+   line-height: 1.8em;
+}
+
+nav#bottom ul a {
+   color: white;
+}
+
+
+
+/* Bottom Navigation Styles */
+
+nav#bottom {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+nav#bottom ul {
+   flex: 0 1 150px;
+}
